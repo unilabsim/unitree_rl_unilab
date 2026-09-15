@@ -52,7 +52,9 @@ select = ["E", "F", "I", "N", "W"]
 ignore = ["E501", "N806", "N801", "N802", "N803", "N812"]
 
 [tool.mypy]
-python_version = "3.10"
+# NumPy's installed stubs use `type` statements that require this parser
+# version even though the runtime package remains compatible with Python 3.10.
+python_version = "3.12"
 mypy_path = "src"
 explicit_package_bases = true
 warn_unused_configs = true
