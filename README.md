@@ -57,16 +57,17 @@ This repository owns the migrated task families:
 - `unitree_go2w_joystick_{flat,rough}`
 - `unitree_quadruped_joystick_rough` (shared owner family)
 - `unitree_g1_23dof_*`
+- `unitree_g1_walk_rough`
 - `unitree_g1_climb_tracking`
 - `unitree_g1_motion_tracking_deploy`
 - `unitree_g1_wall_flip_tracking`
 
-The corresponding 23 registry IDs are `Unitree`-prefixed and all 84 original
+The corresponding 24 registry IDs are `Unitree`-prefixed and all 86 original
 algorithm owner YAML files are included. G1 algorithm trees also carry local
 `base.yaml` families for 29-DoF walk, motion tracking, and flip profiles, so
 downstream developers can inspect and tune an entire Hydra owner without
-reading the UniLab repository. The packaged config tree therefore contains 95
-YAML files: 84 migrated runnable owners plus 11 local G1 base files.
+reading the UniLab repository. The packaged config tree therefore contains 97
+YAML files: 86 migrated runnable owners plus 11 local G1 base files.
 
 G1 profile-specific manager terms are also owned here. This is deliberate:
 Unitree users are expected to iterate on robot-specific command, reward, and

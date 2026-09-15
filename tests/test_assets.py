@@ -99,6 +99,18 @@ def test_packaged_robot_models_load_with_committed_meshes(
         assert (robot, model.nq, model.nu) == (robot, nq, nu)
 
 
+def test_packaged_g1_rough_scene_loads_with_committed_heightfield(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    mujoco = pytest.importorskip("mujoco")
+    monkeypatch.setenv("UNITREE_RL_UNILAB_CACHE", str(tmp_path))
+
+    model = mujoco.MjModel.from_xml_path(str(unitree_assets._stage_robot("g1") / "scene_rough.xml"))
+
+    assert (model.nq, model.nu) == (36, 29)
+    assert model.nhfield == 1
+
+
 def test_prepare_task_config_resolves_scene_and_motion_paths(tmp_path: Path, monkeypatch) -> None:
     monkeypatch.setenv("UNITREE_RL_UNILAB_CACHE", str(tmp_path))
 

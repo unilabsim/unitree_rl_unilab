@@ -16,6 +16,7 @@ cold-path asset staging. It does not claim a new full training run.
 | `UnitreeGo2WJoystickRough` | Registered | Registered | - |
 | `UnitreeG1Walk23DofFlat` | Registered | Registered | - |
 | `UnitreeG1Walk23DofRough` | Registered | Registered | - |
+| `UnitreeG1WalkRough` | Registered | Registered | - |
 | `UnitreeG1MotionTrackingDeploy` | Registered | Registered | - |
 | `UnitreeG1MotionTracking23Dof` | Registered | Registered | - |
 | `UnitreeG1MotionTracking23DofDeploy` | Registered | Registered | - |

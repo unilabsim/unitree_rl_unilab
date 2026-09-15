@@ -13,4 +13,8 @@ registry.register_env_config("UnitreeG1Walk23DofRough", ManagerBasedRlEnvCfg)
 registry.register_env("UnitreeG1Walk23DofRough", make_unitree_g1_walk_env, sim_backend="mujoco")
 registry.register_env("UnitreeG1Walk23DofRough", make_unitree_g1_walk_env, sim_backend="motrix")
 
+registry.register_env_config("UnitreeG1WalkRough", ManagerBasedRlEnvCfg)
+registry.register_env("UnitreeG1WalkRough", make_unitree_g1_walk_env, sim_backend="mujoco")
+registry.register_env("UnitreeG1WalkRough", make_unitree_g1_walk_env, sim_backend="motrix")
+
 __all__: list[str] = []

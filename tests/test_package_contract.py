@@ -26,6 +26,7 @@ EXPECTED_TASKS = {
     "UnitreeGo2WJoystickRough": {"mujoco", "motrix"},
     "UnitreeG1Walk23DofFlat": {"mujoco", "motrix"},
     "UnitreeG1Walk23DofRough": {"mujoco", "motrix"},
+    "UnitreeG1WalkRough": {"mujoco", "motrix"},
     "UnitreeG1MotionTrackingDeploy": {"mujoco", "motrix"},
     "UnitreeG1MotionTracking23Dof": {"mujoco", "motrix"},
     "UnitreeG1MotionTracking23DofDeploy": {"mujoco", "motrix"},
@@ -62,6 +63,7 @@ EXPECTED_SLUGS = {
     "unitree_g1_23dof_wbt_obs",
     "unitree_g1_climb_tracking",
     "unitree_g1_motion_tracking_deploy",
+    "unitree_g1_walk_rough",
     "unitree_g1_wall_flip_tracking",
 }
 
@@ -95,7 +97,7 @@ def test_registry_bootstrap_and_backends_match_migration_scope() -> None:
 
 def test_owner_config_inventory_is_complete_and_namespaced() -> None:
     owner_files = sorted(CONF_ROOT.glob("*/task/*/*.yaml"))
-    assert len(owner_files) == 95
+    assert len(owner_files) == 97
     assert {path.parent.name for path in owner_files} == EXPECTED_SLUGS | BASE_FAMILY_SLUGS
 
     declared_names: set[str] = set()
