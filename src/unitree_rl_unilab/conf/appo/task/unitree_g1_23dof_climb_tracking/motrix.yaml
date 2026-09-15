@@ -1,0 +1,8 @@
+# @package _global_
+defaults:
+  - /task/unitree_g1_23dof_climb_tracking/mujoco
+  - _self_
+
+training:
+  task_name: UnitreeG1ClimbTracking23Dof
+  sim_backend: motrix

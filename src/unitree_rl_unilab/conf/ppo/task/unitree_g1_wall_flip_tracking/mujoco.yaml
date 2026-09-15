@@ -1,0 +1,22 @@
+# @package _global_
+defaults:
+  - /task/unitree_g1_flip_tracking/base
+  - _self_
+
+training:
+  task_name: UnitreeG1WallFlipTracking
+  sim_backend: mujoco
+
+env:
+  scene:
+    model_file: src/unitree_rl_unilab/assets/robots/g1/scene_flat_with_wall.xml
+  commands:
+    motion:
+      params:
+        motion_file: motions/g1/flip_from_wall_104__A304.npz
+
+reward:
+  motion_joint_pos:
+    weight: 0.5
+  motion_joint_vel:
+    weight: 0.25
